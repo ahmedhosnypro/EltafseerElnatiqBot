@@ -29,6 +29,6 @@ public class EltafseerElnatiqBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotToken() {
-        return "1855840023:AAFrQ0LVt9CFtPsLTTCLlyJOiodys29WVWI";
+        return "1778892056:AAFCZHquFMVXyUEVFhqq27U6Z0ZEHa5qLog";
     }
 }
