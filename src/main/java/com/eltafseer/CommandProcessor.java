@@ -99,7 +99,12 @@ public class CommandProcessor extends EltafseerElnatiqBot {
                 markupInline.setKeyboard(rowsInline);
             }
             String answer = "التفسير الناطق لفضيلة الشيخ وحيد بالي\n" +
-                    "سورة " + surah.getName();
+                    "سورة " +
+                    surah.getName() +
+                    " \uD83C\uDF3F\uD83C\uDF3F" +
+                    "\n" +
+                    "\uD83D\uDC4C اختر الجودة المناسبة لك \uD83D\uDC4C";
+
 
 
             SendMessage send = new SendMessage();
