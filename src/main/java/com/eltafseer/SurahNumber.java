@@ -1,3 +1,5 @@
+package com.eltafseer;
+
 //public enum SurahNumber {
 //    s78("An_Nabaa"),
 //    s79("An_Naziaat"),

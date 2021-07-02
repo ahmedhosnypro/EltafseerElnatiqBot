@@ -1,3 +1,5 @@
+package com.eltafseer;
+
 public enum SurahNumberArabic {
     s78("النبأ", new String[]{"https://t.me/wahidbaly_tafseerNateq/37",
             "https://t.me/wahidbaly_tafseerNateq/41"}),
