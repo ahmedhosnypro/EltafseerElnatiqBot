@@ -18,7 +18,9 @@ public class CommandProcessor extends EltafseerElnatiqBot {
             } catch (IllegalArgumentException ignored) {
             }
             switch (command) {
-                case start -> start(chat_id);
+                case start:
+                    start(chat_id);
+                    break;
             }
         } else if (message_text.equals("قائمة السور")) {
             select(chat_id);
@@ -104,7 +106,6 @@ public class CommandProcessor extends EltafseerElnatiqBot {
                     " \uD83C\uDF3F\uD83C\uDF3F" +
                     "\n" +
                     "\uD83D\uDC4C اختر الجودة المناسبة لك \uD83D\uDC4C";
-
 
 
             SendMessage send = new SendMessage();

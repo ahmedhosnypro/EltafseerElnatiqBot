@@ -97,14 +97,24 @@ public class CallBack extends EltafseerElnatiqBot {
             String[] surahTafseer = surah.getContent();
             if (surahTafseer.length == 3) {
                 switch (quality) {
-                    case "high" -> send.setText(surahTafseer[0]);
-                    case "medium" -> send.setText(surahTafseer[1]);
-                    case "low" -> send.setText(surahTafseer[2]);
+                    case "high":
+                        send.setText(surahTafseer[0]);
+                        break;
+                    case "medium":
+                        send.setText(surahTafseer[1]);
+                        break;
+                    case "low":
+                        send.setText(surahTafseer[2]);
+                        break;
                 }
             } else if (surahTafseer.length == 2) {
                 switch (quality) {
-                    case "medium" -> send.setText(surahTafseer[0]);
-                    case "low" -> send.setText(surahTafseer[1]);
+                    case "medium":
+                        send.setText(surahTafseer[0]);
+                        break;
+                    case "low":
+                        send.setText(surahTafseer[1]);
+                        break;
                 }
             }
             try {
