@@ -11,21 +11,23 @@ import java.util.List;
 
 public class CommandProcessor extends EltafseerElnatiqBot {
     void processCommand(String message_text, long chat_id) {
-        if (message_text.startsWith("s")) {
-            Command command = Command.start;
-            try {
-                command = Command.valueOf(message_text.toLowerCase().replaceAll("/", ""));
-            } catch (IllegalArgumentException ignored) {
-            }
+        Command command;
+        try {
+            command = Command.valueOf(message_text.toLowerCase().replaceAll("/", ""));
             switch (command) {
                 case start:
                     start(chat_id);
                     break;
+                case menu:
+                    select(chat_id);
+                    break;
             }
-        } else if (message_text.equals("قائمة السور")) {
-            select(chat_id);
-        } else {
-            showSurahContentMenu(message_text, chat_id);
+        } catch (IllegalArgumentException ignored) {
+            if (message_text.equals("قائمة السور")) {
+                select(chat_id);
+            } else {
+                showSurahContentMenu(message_text, chat_id);
+            }
         }
     }
 
@@ -46,7 +48,6 @@ public class CommandProcessor extends EltafseerElnatiqBot {
         SendMessage message = new SendMessage();
         message.setChatId(String.valueOf(chat_id));
         message.setText("اختر سورة لعرض تفسيرها");
-//        message.setReplyMarkup(markupInline());
         message.setReplyMarkup(Menu.surahMenu());
         try {
             execute(message);
